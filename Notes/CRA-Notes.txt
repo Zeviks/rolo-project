@@ -1,0 +1,49 @@
+[ Introduction ]
+  npm - Installs files and keeps them there. Also we need to manually execute the files.
+
+  npx - Downloads and immidietly executes the package, once done it deletes it. 
+  * This is useful because it deletes the package once we're done, does not clog our dist / disk. 
+
+
+  The way react functions is by "injecting" app component into the div element with the id of "root"
+
+  yarn build - bundles code. Makes it as optimal as possible. Removes all unnecessary spaces.
+
+
+Due to the differences between browsers we have to develop site that can run on any browser. 
+
+Babel:
+  One of the ways we ensure this is by using babel, well react automatically uses babel in compile our modern-js code and turns it into js any browser can understand. This can be ES5 or even prior to ES5. 
+
+Webpack:
+  This is a built in bundler that turn our normal code into machine-readable code. Removing all of the unnecessary features that the browser does not need.
+
+  Also Webpack brecks our code into chunks. Each chunk is a portion of our app which will be delivered to the user based on if he needs it or not.
+  Only uses the revelant code to the current section being loaded can be an example.
+
+yarn build / react build
+ Leverages both of these tools to create the most optimized version of our app possible for all browsers. 
+
+Eject: 
+  if we ever wanted to fine tuned our build files our self we can use the eject command. 
+  This is not recommended, since facebook (the developers of react) has fined tuned these tools to almost execellence
+  But for any nieche situatuions the command exixst.
+
+Manifest.json
+ This allows our users to use our app on an offline setting. 
+
+robots.txt 
+ Auto-generated SEO helper
+
+In Summary: 
+In react, we create functions that return html code. 
+
+
+
+
+
+
+
+
+
+
