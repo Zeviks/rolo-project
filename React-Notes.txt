@@ -1,8 +1,0 @@
-npm - Installs files and keeps them there. Also we need to manually execute the files.
-
-npx - Downloads and immidietly executes the package, once done it deletes it. 
-* This is useful because it deletes the package once we're done, does not clog our dist / disk. 
-
-
-The way react functions is by "injecting" app component into the div element with the id of "root"
-
