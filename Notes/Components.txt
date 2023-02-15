@@ -18,3 +18,21 @@ const [nameOfState, setNameOfState] = useState(defaultState);
 
 This is the standard syntax
 
+
+
+
+Due to how reference values work in javascript, the only way react can update state is by it being passed a completly diffrent value/variable. 
+In javascript, setting two variables to the same obj does not mean each of does variables has it own object. 
+It means that both of does vairables are "pointing" at the object. Meaning if we make a change to that object, the change will be reflected on both variables.
+
+To avoid this is why we have a second argument [state, setState]
+                                                        ^^^^^^^
+
+Left = the current state
+setState = the new state / value we're updating.
+
+Once react notices that the state has been updated / changed it will immdietly reload the updated component to reflect the change.
+
+
+
+

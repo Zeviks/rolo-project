@@ -1,13 +1,15 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 
 const App = ():JSX.Element => {
-const [name, setName] = useState("Nathan");
+let [name, setName] = useState("Nathan");
 
   return (
     <div className="">
         <h1>Hello my name is {name}.</h1>
         <input type="text" className="mt-2" />
-        <button className="pl-2">Change Name</button>
+        <button className="pl-2" onClick={() => {
+            setName("NewName");
+        }}>Change Name</button>
     </div>
   )
 }
