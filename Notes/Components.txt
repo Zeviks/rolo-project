@@ -1,0 +1,20 @@
+Hooks - Are very used almost exclusively in react. 
+
+Classes = Is a more general approach, since lots of programming languages are based on OOP. This are the foundations of classes.
+
+Understanding when react is rendering and re-rendering your application is a curcial concept to understand. 
+
+JSX - Was designed in a way that closely resembles HTML, since we're always trying to visualize how our page will look. 
+This gives it the functionality of javascript, and the feel of HTML. 
+
+
+[ State ] : 
+
+State is one of the many ways we can tell react to re-render. Whenever our state has change our page will reload with the update state.
+
+To make use of state we first import it and then use this syntax :
+
+const [nameOfState, setNameOfState] = useState(defaultState);
+
+This is the standard syntax
+
