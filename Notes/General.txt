@@ -1,0 +1,7 @@
+We always want to start by creating the functionality then we add the ui. 
+Its much easier to add the UI later. 
+
+
+Think about like building a table. Its much easier to build the table first then style to liking after the strcuture has been set.
+
+Alwasy have a clear idea of what feature we're implementing and how we can implement it.
