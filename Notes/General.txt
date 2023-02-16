@@ -5,3 +5,56 @@ Its much easier to add the UI later.
 Think about like building a table. Its much easier to build the table first then style to liking after the strcuture has been set.
 
 Alwasy have a clear idea of what feature we're implementing and how we can implement it.
+
+
+
+In react we have all of the HTML tags. 
+
+Tags like input, div, form, etc. They all exist in react. 
+
+React does this to allow fucntionality in the UI
+
+But we don't want to look at them as simple HTML tags, inteads we should look at them as components. 
+React has built a component for each of HTML's tags. These already made components contain multiple unique propties that only exist in react.
+
+
+
+
+[Handlers] 
+In React we have a property we can call on any element known as handlers. This properties role is to detect a change and perfomr a certain action in response to the change.
+
+They all take a callback function which is where you will describe what you want to do.
+
+There're several handlers with diffrent roles:
+
+onClick handler, this triggers whenever the certain element has been clicked. A commons use of this are buttons.
+onChange handler, this triggers when the value of the element has change / update. A common use of this is input fields.
+
+Find more here : https://reactjs.org/docs/events.html
+
+
+We never want to change / access anything with an underscore. Example: _app, _reactName, etc.
+
+
+
+[ Modifiying Data / State Search Data ]
+If you ever modify any type of data and we want at some point we want to get back to the original state of the data the "fullest" version
+we need to first keep a copy of the original data. We can do this by storing a copy using state. Then we make changes to an alternative copy
+of the original and whenever we need to go back to the original state we simply make use of the copy we did at the start.
+
+
+
+[Optimization / Functions in return / handler functions ]
+In react whenver we amke use of a function that is being initiated by an event handler property is a bad practice. This is because
+that function is not being created in and stored in a variable this is whats known as annonymous functions. These functions after being used 
+are simply thrown away, just to be re-created again whenever the component re-renders.
+
+This is a bad practice because everytime react renders or re-renders the component it will recrete this function even if its not being used. 
+Having multiple of these function in the return can dratically lower your sites perfomrance.
+
+A fix to this is to move the function out of the return / render(). 
+for example if this is a fix for an onChange function we can move the logic of this fucntion else were and simply call the function inside of the 
+onChange to use the functionality.
+
+This is better because the function already exist in memory, instead of being re-created not its just being called whenvever it neeeded.
+It also shortens code inside the render.
