@@ -1,0 +1,21 @@
+In class components not matters what the constructor runs first 
+
+Then comes the render method 
+
+then comes lifecycle methods like componentDidMount.
+
+
+But in most cases whenever componentDidMount triggers so will the render method since state has been update and we want to keep our 
+component up to date.
+
+try the console.log test.
+
+vid 39
+
+
+In summary, we first want to initlize our state to set the structure for the site.
+Then we render the component 
+Then if we need to fetch some data, or update any data we use the useEffect or lifecycle methods which they update our state 
+Which then trigger a re-render of the component the UI with the update data. 
+
+This is the core flow of react.

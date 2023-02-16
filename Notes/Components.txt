@@ -36,3 +36,45 @@ Once react notices that the state has been updated / changed it will immdietly r
 
 
 
+[Shallow Merge] : It only updates the keys that its being told to update, any others values will remain untouched.
+
+
+    [setState Non-Synchronous] : Whenever we log state right after it has been updated, we will notice we get the previous value then the new one. 
+    This is because react batches / stacks the changes in the most optimal way possible. 
+
+    Take an entire app that has multiple states taht can be update with one button, react wont update all of does state at the same time, it will batch them 
+    and update them 
+
+
+    This makes it behave like a async function, since the specific state you may be logging may or may not be update yet due to it being stacked / batched.
+
+
+
+[ The App Component ]: 
+    Its a comon practice to render our entire application just using the app component
+
+    We then take the app component and create our applicaiont in it, we can separate sections and what not inot their own components inside of the app Component
+    which we then render inside of the main / index component.
+
+
+
+Map : Iterates over every element in an array then returns a new array based on the given parameters
+Remember to always provide it a key.
+
+IDs are neccessary because if we ever had large sets of data that can have data that overlaps each otehr ( duplicate ) it would be difficult to diffriciate the two. 
+By assigning a UNIQUE identifier resolves this issue, in most cases our unique code will simply be and "id". 
+
+Also, react uses the id to in-case we update that specific key we only update the element corresponding to that key.
+
+
+[Single Page Applicatons (SPAs)] : 
+
+First we need to understand the difference, before with non-spa we would first have to request of of the files from a server then build the server in our browser
+This is why when browsing the internet in the early 2000s to early 2010s we would experince a brif white page then the page would load in. 
+
+SPA: 
+Now with SPAs we can similar to non-spa when we first land at the landing page we still request all of does files including the react code from a server
+But now everytime we go to any of the links of the site instead of making a another request to the server, we now use that react code we initially got and the build the page 
+locally using that. Since there's no longer that middle man we have substantually increase the loading speed of our site.
+
+

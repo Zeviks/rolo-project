@@ -1,0 +1,4 @@
+Lifecylce methods are not supported in function components, but we can use the useEffect method to replicate the same functionality
+
+More info here: 
+https://fettblog.eu/typescript-react/hooks/#useeffect
