@@ -1,0 +1,68 @@
+Functional component: Function behave different from classes since instead of instantiating a class and constantly having access to it 
+with functional components it will execute the function and return the JSX at the end. That it. This means taht lifecycle method will behave 
+differtly inside of functional components. since fucntion just execute and return there value its a different approach.
+ 
+This approach is known as side effects.
+
+
+Pure & Impoure Functions 
+
+Pure: Pure function take some args and returns the exact same thing no matter waht argumets are given. 
+An example would be :
+
+const sum = (a: number, b: number): number => {
+    return a + b;
+}
+
+sum(2+2) // 4 
+No matter how many time we call this function as long as the arguments stay the same the answer will also remain the same 
+Also it should not return any side effects
+
+Side-effects are when fucntinos have the ability to change things outside of the function scope.
+
+
+This is an example of a pure function.
+
+
+Impure: An inpure function is a function that will not always return the same values, the value are dynamic and they can change. 
+ 
+An example can be :
+let c = 3;
+
+const sum = (a: number, b: number): number => {
+    return a + b + c;
+}
+sum (2+2) //7 
+
+As long as c remains the same so will our answer, but if we decide to change c our answer chagnes completetly as well. 
+This is known as an inpure function.
+
+
+
+Our First Hook ( useState )
+
+const [state, setState ] = useState("");
+       ^^^^^
+Whenever this changes, our component will re-render.
+
+const [state, setState ] = useState("Test");
+Nothing would happend if we provided the values "Test" because it already exist in the state. Its being declared as a default. 
+Now th moment we provide anything different than the default, our state will immidietly trigger.
+
+
+Infinite Re-Render :
+ 
+This happens whenever theres a differnt value in the state as it was in the previous state re-render the function, in this case 
+since we 're fetching an array extrenally it will have a different place in memory then our current array even if the values are identical. 
+This means that react will read it as a whole new value and render, but the same case as before since we're getting back an external array 
+its read as a new so react re-renders. This will continue indefinetly. 
+
+Side-effect: This is a behavior that we trigger from our fucntions that affect something that exist outside of the scope of the fucntion 
+This can be we either rely or modify a vlaue that exist outside of the function.
+
+
+An example of a side effect is useEffect. 
+
+
+[ useEffect ]
+useEffect is a fucntion

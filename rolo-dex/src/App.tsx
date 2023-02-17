@@ -22,6 +22,7 @@ const App = ():JSX.Element => {
         fetch(API_URL)
         .then((res) => res.json())
         .then((users) => setMonsters(users))
+        console.log("Render")
     }, []) // Add empty dependency array here, this tells react to only run this once.
   
     return (

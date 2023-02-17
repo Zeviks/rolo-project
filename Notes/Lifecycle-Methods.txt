@@ -2,3 +2,38 @@ Lifecylce methods are not supported in function components, but we can use the u
 
 More info here: 
 https://fettblog.eu/typescript-react/hooks/#useeffect
+
+
+Lifecycle Diagram: https://reactjsguru.com/react-component-life-cycle-with-diagram/
+
+Lifecycle Breakdown:
+
+This breaksup into three categories 
+
+Mounting , Updating, and Unmounting 
+
+
+Mounting: Here's we react executes our app for the first time / Run the App.js.
+It begins by eecuting the constructor 
+Then the render function 
+The finally react updates any references and the DOM 
+
+Once this is all done the component has successfully mounted. 
+This is where componentDidMount will fall in. <-- Classes Only --
+
+Updating: Here's when react re-renders the component to reflect the changes. 
+It will fisrt run the render function, this is triggeres by the addition of new props, changes in the state / setState, and forceUpdate()
+*forceUpdate() is not recommended to be used 
+componentDidUpdate <-- Classes Only --
+
+
+
+Unmounting: This is where we remove a component from the DOM / page 
+This happens whenever we change or UI this can be simply by us goingto other pages, etc.
+componentWillUnmount <-- Classes Only --
+
+
+This is the exact same structure in functional componetns as well.
+
+
+
