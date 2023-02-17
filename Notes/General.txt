@@ -58,3 +58,62 @@ onChange to use the functionality.
 
 This is better because the function already exist in memory, instead of being re-created not its just being called whenvever it neeeded.
 It also shortens code inside the render.
+
+
+
+[ Components ] 
+Its a great practice to see if theres something in our code we can "generalize" think of it like lego blocks. 
+If we create our code like lego block were we can utilize the functionality in multiple places without having to re-create 
+This saves alot of time not only developeing but also cuts down on the bugs. 
+
+If theres a fetures that we're constantly having to re-use thats a sign that it should be a component. 
+We can create our components dynamicaaly and re-use them in other places and make the feel like they were specifically designed for that specific section.
+
+We want components to have sigle responsibility: 
+Some exaples can be :
+A navbar 
+A search bar
+A list of users 
+The footer 
+A feature of the hero 
+etc.
+
+
+
+[Project Naming Combention] 
+Depending on the project, its possible you may encounter diffrernt naming convetions for the projects. 
+
+This is an example
+componentName.component.tsx
+componentName.component.jsx
+
+ComponenName - We always want to capitalize our component names, its how react knows its a developer built component.
+
+
+
+[More on Rendering & Re-Rendering]
+Whenever our props or state changes our site will re-render 
+
+New / Update props can mean new data so react re-renders }  Always keep this in mind, if our components are not proeprly updating the 
+New / Update state can mean new data so react re-renders }  issue will lie here .
+
+These are the primary reasons why react re-renders
+
+Another important render concept to understand is how our component strcuture is render. 
+
+React renders from top to bottom, think about like this 
+
+Image this is our render inside of our index / main 
+
+
+React will first render the app component
+The moment react encountes another componet inside of our app it will render all of its props and render functiion, then it goes back to the app component to continue where it left of
+now react encounters our 2nd component. It will render all of its props and render functiion. And then its resumes back in the app component 
+This process repeats until all components are rendered.
+
+<App />
+ <Component 1 />
+ <Component 2 />
+ <Component 3 />
+<OtherApp /> <- This is just an example :) 
+

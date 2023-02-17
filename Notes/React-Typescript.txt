@@ -1,0 +1,8 @@
+[Props]
+Whenvever we're working with props in typescript we need to provide it an interface / type of what data to expect.
+In our case we are passing an array of object as a prop 
+In scenerios like these its great to create a models folder, here we can store all of our interfaces related with that specific prop 
+We create an interface based on the imcoming / expected data that coming to our comp thorugh the component.
+
+
+
