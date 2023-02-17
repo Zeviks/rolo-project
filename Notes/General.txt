@@ -117,3 +117,28 @@ This process repeats until all components are rendered.
  <Component 3 />
 <OtherApp /> <- This is just an example :) 
 
+
+
+
+[App / Main Component]
+You will notice that app.tsx is always remains outside of the components folder. This is because everything in the components folder 
+
+Is reuseable. Lego-block like 
+
+App.tsx is not, we only have 1 per app. 
+Since this is the top level component. 
+
+Think of it like a tree.
+
+
+
+[CSS in React]
+
+Whenver we import a stylesheet into our App component since it is the top level component the style will be applied not onlt to the app
+components, but all components withing the app also. This can have negative effects by it targeting things we maybe didnt want it to.
+
+We always want to keep our syyles isolated from other components. 
+
+
+
+

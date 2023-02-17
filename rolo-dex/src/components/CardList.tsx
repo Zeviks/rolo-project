@@ -1,14 +1,19 @@
 import Monster from "./models/monster"
+import Card from "./Card/Card";
 
 interface CardMonsters {
     filteredMonsters: Monster[];
 }
 
-const CardList = ( { filteredMonsters } : CardMonsters) => {
+const MonsterIMG = 'https://robohash.org/1?set=set2&size=180x180';
+
+const CardList = ( { filteredMonsters }: CardMonsters) => {
   return (
-    <ul className="text-amber-400 text-4xl ml-2">
-        {filteredMonsters.map(monster => { return <li className="text-2xl font-semibold text-emerald-300 p-2" key={monster.id}>{monster.name}</li>})}
-    </ul>
+    <div className="w-[85vw] mx-auto grid grid-cols-4 gap-[20px]"> 
+        {filteredMonsters.map( monster => 
+          { return <Card key={monster.id} name={monster.name} email={monster.email} id={monster.id}/> }
+          )}
+    </div>
   )
 }
 
