@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react"
 import CardList from "./components/CardList"
 import SearchBox from "./components/SearchBox";
+import Monster from "./components/models/monster";
 
-export interface userState {
-    name: string,
-    id: number,
-}
 
 const App = ():JSX.Element => {
 
     const API_URL = "https://jsonplaceholder.typicode.com/users";
-    let [monsters, setMonsters] = useState<userState[]>([]) 
+    let [monsters, setMonsters] = useState<Monster[]>([]) 
     let [searchString, setSearchString] = useState("");
     
     //Filtering Monsters
