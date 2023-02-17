@@ -26,7 +26,8 @@ const App = ():JSX.Element => {
   
     return (
         <div className="">
-          <div className="m-4">
+          <h1 className="my-[75px] text-[68px] text-emerald-300 font-bold">Roledex</h1>
+          <div className="my-10 mx-28">
             <SearchBox onSearchChange={onSearchChange} placeholder='Search Monsters'/>
           </div>
             <CardList filteredMonsters={filteredMonsters}/>
