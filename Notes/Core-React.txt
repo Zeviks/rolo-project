@@ -1,0 +1,54 @@
+The DOM in react is create in a tre-like structure with the top level "app" component serving as the parent to the componentes so on a so forth.
+
+In the end we're left with a DOM that looks and behaves wel... like a DOM. 
+
+-- Reflow process
+
+Due to how the dom works, its usually really expensive to changes things on it. 
+The process of removing things and switching them around is really expensive. 
+
+React gets around this issue by creating a duplicate of the DOM, but in javascript. 
+Instead of the usual elements, react reflects the elements in javascript. 
+Making it much easier to work with.
+
+
+But in order to display things to user's we'll need a real DOM since we can't use the javascript tree to display things.
+We instead use it to keep track of what's changed.
+
+This is why the javascript DOM is known as the "Virtual DOM"
+
+
+--Real Example 
+
+If we have someone begin typing into our search, they type 3 letters.:
+
+React will make a copy of the Virtual DOM, and use the original as a snapshot to later compare both.
+
+It will then take the 3 letter inside of the top level since that's where the searchbox is located.
+App--
+    the searchBox then triggers and event for each letter.
+    this changes then call setState inside of app 
+
+    since state is being updated react then re-renders the app with all ofits children components 
+
+
+In summary: The virtual dom is just figuring out the most optimal way to figure out what the real dom should look like. 
+
+
+
+===React & React DOM 
+
+React is the engine, its what determines the diffing, optimization, etc 
+
+ReactDOM determines what we're trying to render to the specificaly to the DOM - Web 
+ReactNative determines what we're trying to render to the specific native - Mobile
+
+This are used when we're build specific UI for whatever platform we're building it for.
+
+unpkg host lost of source code for most libraries
+
+
+
+
+
+--DOM Painting 
