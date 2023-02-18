@@ -7,11 +7,11 @@ import Monster from "./components/models/monster";
 const App = ():JSX.Element => {
 
     const API_URL = "https://jsonplaceholder.typicode.com/users";
-    let [monsters, setMonsters] = useState<Monster[]>([]) 
-    let [searchString, setSearchString] = useState("");
+    const [monsters, setMonsters] = useState<Monster[]>([]) 
+    const [searchString, setSearchString] = useState("");
+    const [filteredMonsters, setFilteredMonsters] = useState(monsters)
+
     
-    //Filtering Monsters
-    const filteredMonsters = monsters.filter((monster) => monster.name.toLocaleLowerCase().includes(searchString));
     const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
       const searchString = e.target.value.toLocaleLowerCase();
         setSearchString(searchString);
@@ -24,6 +24,13 @@ const App = ():JSX.Element => {
         .then((users) => setMonsters(users))
         console.log("Render")
     }, []) // Add empty dependency array here, this tells react to only run this once.
+
+    //Filtering Monsters
+    useEffect (() => {
+      const newfilteredMonsters = monsters.filter((monster) => monster.name.toLocaleLowerCase().includes(searchString));
+      setFilteredMonsters(newfilteredMonsters);
+    }, [monsters, searchString])
+
   
     return (
         <div className="">

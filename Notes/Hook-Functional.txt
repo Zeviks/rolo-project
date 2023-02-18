@@ -65,4 +65,14 @@ An example of a side effect is useEffect.
 
 
 [ useEffect ]
-useEffect is a fucntion
+This is a fucntion that takes on a acallback function and a array of dependencies
+
+useEffect(() => {
+    The effect we want to happen....
+}, [])
+  ^^^^ 
+Majority of the time this will contain state or passed down prop values.
+Whenever the value of the provided dependencie changes, it will trigger the function. 
+
+Whenever we dont provide the array a value it will only run the fucntion once since there's no dependencio to watch for a change.
+
