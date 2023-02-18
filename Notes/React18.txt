@@ -1,0 +1,3 @@
+With the addition of react.strict mode we now benefit from extra warnings and protect us against using depricated libraries. 
+
+React strcit mode also doulbe renders in case of any wierd behaviour taking place inside useEffects of our functionla components.
